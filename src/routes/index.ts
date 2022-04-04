@@ -39,7 +39,7 @@ indexRouter.get("/villelaBrasilQueueOne", async (req: Request, res: Response) =>
   logger.success(`Object sended successfully to Database`);
 
   logger.info(`Sending object to process on Azure Service Bus: ${JSON.stringify(obj)}`);
-  await queueService.villelaBrasilQueueOne.sendToQueue(obj);
+  await queueService.NeoWay.sendToQueue(obj);
   logger.success(`Object sended successfully to Queue`);
 
   res.json({ message: "All steps finished successfully on request", transactionId });

@@ -17,7 +17,7 @@ class ServiceBus extends EventEmitter {
     super();
     this.queueName = options.queueName;
     this.connection = new ServiceBusClient(process.env.SERVICE_BUS);
-    this.receiver = this.connection.createReceiver(this.queueName, "s1");
+    this.receiver = this.connection.createReceiver(this.queueName);
     this.sender = this.connection.createSender(this.queueName);
   }
 
@@ -47,5 +47,5 @@ class ServiceBus extends EventEmitter {
 }
 
 export default {
-  villelaBrasilQueueOne: new ServiceBus({ queueName: Queues.villelaBrasilQueueOne }),
+  NeoWay: new ServiceBus({ queueName: Queues.neoWay }),
 };
