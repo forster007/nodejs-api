@@ -17,7 +17,15 @@ indexRouter.get("/villelaBrasilQueueOne", async (req: Request, res: Response) =>
     cnpj: cnpj as string,
     name: "villelaBrasilQueueOne",
     responses: {
+      exatodigital: {
+        data: {},
+        status: "requested",
+      },
       neoway: {
+        data: {},
+        status: "requested",
+      },
+      serasa: {
         data: {},
         status: "requested",
       },
