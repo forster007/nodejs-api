@@ -43,9 +43,6 @@ class ServiceBus extends EventEmitter {
 
   async sendToQueue(body: any) {
     await this.sender.sendMessages({ body });
-
-    this.sender.close();
-    this.connection.close();
   }
 }
 
